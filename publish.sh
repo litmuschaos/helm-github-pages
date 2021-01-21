@@ -40,7 +40,9 @@ echo '>> Installing Helm...'
 #alias helm=/tmp/helm/bin/linux-amd64/helm
 #helm version -c
 #helm init -c
-curl https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 | bash
+wget https://raw.githubusercontent.com/helm/helm/master/scripts/get-helm-3 
+chmod +x get-helm-3
+./get-helm-3 
 helm version -c
 
 echo ">> Checking out $GITHUB_PAGES_BRANCH branch from $GITHUB_PAGES_REPO"
